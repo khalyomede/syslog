@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d53c510a8a041adfac24f2a562b1ff3",
+    "content-hash": "896b980f01644744cc62109c60052cb2",
     "packages": [
         {
             "name": "khalyomede/prototype",
@@ -47,16 +47,16 @@
         },
         {
             "name": "khalyomede/syslog-interface",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/khalyomede/syslog-interface.git",
-                "reference": "5d9e9a7939f15abc52a3bf2cceb30776f5333662"
+                "reference": "763ab775e548e3302d2bf5436c4f87ef0485e0e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/khalyomede/syslog-interface/zipball/5d9e9a7939f15abc52a3bf2cceb30776f5333662",
-                "reference": "5d9e9a7939f15abc52a3bf2cceb30776f5333662",
+                "url": "https://api.github.com/repos/khalyomede/syslog-interface/zipball/763ab775e548e3302d2bf5436c4f87ef0485e0e0",
+                "reference": "763ab775e548e3302d2bf5436c4f87ef0485e0e0",
                 "shasum": ""
             },
             "require": {
@@ -79,7 +79,7 @@
                 }
             ],
             "description": "Standard proposal for Syslog protocol across any classes",
-            "time": "2018-03-29T21:08:55+00:00"
+            "time": "2018-03-30T21:42:28+00:00"
         }
     ],
     "packages-dev": [
