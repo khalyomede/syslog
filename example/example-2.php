@@ -12,5 +12,7 @@
 		->device('test-website')
 		->processus('test-home');
 
-	$log->debug("user created in 5ms");
+	$message = "user {username} created successfuly";
+
+	$log->info($message, ['username' => 'johndoe']);
 ?>

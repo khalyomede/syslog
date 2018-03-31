@@ -2,6 +2,7 @@
 	require( __DIR__ . '/../vendor/autoload.php' );
 
 	use Khalyomede\Syslog;
+	use Psr\Log\LogLevel;
 
 	$log = new Syslog;
 
@@ -12,5 +13,5 @@
 		->device('test-website')
 		->processus('test-home');
 
-	$log->debug("user created in 5ms");
+	$log->log(LogLevel::ERROR, "the user could not be created because: this username already exists");
 ?>

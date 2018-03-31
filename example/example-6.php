@@ -10,7 +10,8 @@
 		->facility(22)
 		->source('test.test.com')
 		->device('test-website')
-		->processus('test-home');
+		->processus('test-home')
+		->identifier('AZXT6');
 
-	$log->debug("user created in 5ms");
+	$log->debug("database optimized in 33.09 s.");
 ?>

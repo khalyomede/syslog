@@ -10,7 +10,8 @@
 		->facility(22)
 		->source('test.test.com')
 		->device('test-website')
-		->processus('test-home');
+		->processus('test-home')
+		->date(new DateTime('2017-11-29 04:34:09', new DateTimeZone('Europe/Paris')));
 
-	$log->debug("user created in 5ms");
+	$log->emergency('detected forbidden access to database');
 ?>
