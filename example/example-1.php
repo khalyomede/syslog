@@ -2,15 +2,16 @@
 	require( __DIR__ . '/../vendor/autoload.php' );
 
 	use Khalyomede\Syslog;
+	use Psr\Log\LogLevel;
 
 	$log = new Syslog;
 
-	$log->host('test.test.com')
-		->port(0)
+	$log->host('log.test.com')
+		->port(12345)
 		->facility(22)
-		->source('test')
-		->device('test')
-		->processus('test');
+		->source('test.test.com')
+		->device('test-website')
+		->processus('test-home');
 
-	$log->debug('test');
+	$log->debug("test");
 ?>
