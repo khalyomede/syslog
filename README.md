@@ -4,11 +4,11 @@ Log into your Syslog destination.
 
 ```php
 $log->host('some.vendor.com')
-	->port(92883)
-	->facility(22)
-	->source('my.company.io')
-	->device('website')
-	->processus('price-index');
+  ->port(92883)
+  ->facility(22)
+  ->source('my.company.io')
+  ->device('website')
+  ->processus('price-index');
 
 $log->debug('page loaded in 3.840 s');
 ```
