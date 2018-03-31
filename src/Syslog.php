@@ -105,6 +105,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::EMERGENCY, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::EMERGENCY, LogLevel::EMERGENCY);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -123,6 +124,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::ALERT, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::ALERT, LogLevel::ALERT);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -141,6 +143,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::CRITICAL, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::CRITICAL, LogLevel::CRITICAL);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -159,6 +162,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::ERROR, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::ERROR, LogLevel::ERROR);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -177,6 +181,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::WARNING, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::WARNING, LogLevel::WARNING);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -195,6 +200,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::NOTICE, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::NOTICE, LogLevel::NOTICE);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -213,6 +219,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::INFO, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::INFO, LogLevel::INFO);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -231,6 +238,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, LogLevel::DEBUG, 2);
 
 			$this->sendLog($contextualized_message, LogLevel::DEBUG, LogLevel::DEBUG);
+			$this->resetDates();
 
 			return $this;
 		}
@@ -252,6 +260,7 @@
 			$contextualized_message = $this->getContextualizedMessage($message, $context, 'log', 2);
 
 			$this->sendLog($contextualized_message, $level, 'log');
+			$this->resetDates();
 
 			return $this;
 		}
@@ -361,6 +370,15 @@
 		}
 
 		/**
+		 * @since v1.0.0
+		 */
+		public function deleteIdentifier(): Syslog {
+			$this->identifier = null;
+
+			return $this;
+		}
+
+		/**
 		 * @return void
 		 * @since v1.0.0
 		 */
@@ -449,7 +467,7 @@
 			$success = @socket_sendto($this->socket, $syslog, strlen($syslog), MSG_DONTROUTE, $this->host, $this->port);
 
 			if( $success === false ) {
-				throw new RuntimeException(sprintf('Syslog::%s ecountered an error during the binding of the host to the socket (detail: %s)', 
+				throw new RuntimeException(sprintf('Syslog::%s ecountered an error during the sending of the of the message (detail: %s)', 
 					$caller,
 					socket_strerror(socket_last_error())
 				));
