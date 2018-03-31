@@ -37,4 +37,8 @@ class SyslogSpec extends ObjectBehavior
     function it_should_not_allow_setting_an_empty_identifier() {
     	$this->shouldThrow(InvalidArgumentException::class)->during('identifier', ['']);
     }
+
+    function it_should_not_allow_logging_with_an_unknow_severity() {
+        $this->shouldThrow(InvalidArgumentException::class)->during('log', ['test', 'test-message']);
+    }
 }
