@@ -1,5 +1,9 @@
 # Syslog
 
+![PHP from Packagist](https://img.shields.io/packagist/php-v/khalyomede/syslog.svg)
+![Packagist](https://img.shields.io/packagist/v/khalyomede/syslog.svg)
+![Packagist](https://img.shields.io/packagist/l/khalyomede/syslog.svg)
+
 Log into your Syslog destination.
 
 ```php
