@@ -220,24 +220,6 @@ The keys of the context should respect the following format: lower case, numbers
 - If the socket creation failed
 - If the message could not be sent through the socket connection
 
-**Note**
-
-The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
-
-**Exception**
-
-`InvalidArgumentException`:
-- If the message is empty
-- If the context does not contains an array of key-pairs values
-- If one of the context keys is not properly formated
-
-`LogicException`:
-- If one of the following properties are not filled: host, post, source, device, processus
-
-`RuntimeException`:
-- If the socket creation failed
-- If the message could not be sent through the socket connection
-
 ### critical
 
 Sends a message to the log destination with a critical severity.
