@@ -25,6 +25,7 @@ $log->debug('page loaded in 3.840 s');
 
 - PHP version >= 7.0.0
 - Socket extension enabled (`php_sockets.dll` on windows or `php_sockets.so` on Linux distributions)
+- A log server that accepts UDP packet messages (as this library send the log through UDP)
 
 ## Installation
 
