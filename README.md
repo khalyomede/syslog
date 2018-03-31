@@ -203,6 +203,7 @@ public function alert(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -220,6 +221,7 @@ The keys of the context should respect the following format: lower case, numbers
 - If the message could not be sent through the socket connection
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -245,6 +247,7 @@ public function critical(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -276,6 +279,7 @@ public function debug(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -317,6 +321,7 @@ public function emergency(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -342,6 +347,7 @@ public function error(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -395,6 +401,7 @@ public function info(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -420,6 +427,7 @@ public function log(string $level, string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -447,6 +455,7 @@ public function notice(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
@@ -496,6 +505,7 @@ public function warning(string $message, array $context = []): Syslog
 ```
 
 **Note**
+
 The keys of the context should respect the following format: lower case, numbers, with underscores and periods only.
 
 **Exception**
