@@ -251,9 +251,15 @@ The keys of the context should respect the following format: lower case, numbers
 
 ### date
 
+Force the log to be timestamped to a specific date.
+
 ```php
 public function date(DateTime $date): Syslog
 ```
+
+**Note**
+
+If you do not call this method at each log call, the date will be set to the time at which you call the sysloger.
 
 ### debug
 
