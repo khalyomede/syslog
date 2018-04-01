@@ -89,8 +89,6 @@ $log->info($message, ['username' => 'johndoe']);
 ### Example 3: use a generic method for logging
 
 ```php
-require( __DIR__ . '/../vendor/autoload.php' );
-
 use Khalyomede\Syslog;
 use Psr\Log\LogLevel;
 
